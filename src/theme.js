@@ -193,7 +193,7 @@ export const tokens = (mode) => ({
   };
 
   export const ColorModeContext = createContext({
-    toggleColorMode: () => {},
+    colorChangeMode: () => {},
   });
   
   export const useMode = () => {
@@ -201,7 +201,7 @@ export const tokens = (mode) => ({
   
     const colorMode = useMemo(
       () => ({
-        toggleColorMode: () =>
+        colorModeToggle: () =>
           setMode((prev) => (prev === "light" ? "dark" : "light")),
       }),
       []
